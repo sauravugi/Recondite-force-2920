@@ -33,3 +33,23 @@ a > img{
     background-color: white;
     border: 1px solid rgb(188, 185, 185);
 }
+#btn > button:hover{
+    cursor: pointer;
+}
+#hamburger > img{
+    width: 20px;
+    height: 20px;
+}
+#hamburger:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#submit {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(180, 176, 176);
+    border-radius: 5px;
+    color: black;
+}

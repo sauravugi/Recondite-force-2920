@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Unsplash</title>
+    <link rel="icon" href="https://seeklogo.com/images/U/unsplash-logo-EAD3A22BB0-seeklogo.com.png">
+
+    <style>
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        #login{
+            width:50%;
+            margin: auto;
+            text-align: center;
+            margin-top: 45px;
+        }
+        #login>img{
+            width: 64px;
+            height: 64px;
+            margin-bottom: 24px;
+            cursor: pointer;
+        }
+    
+        #login h1{
+            font-size: 28px;
+            font-weight: bold;
+            margin: -5px 0px 8px 0px;
+            
+        }
+        h1+p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin:-10px 0px 16px 0px;
+        }
+        p+p{
+            margin: -10px 0px 30px 0px;
+        }
+        h4+p>a{
+            color: #767676;
+            text-decoration: underline;
+        }
+        .inputBx{
+            margin-bottom: 20px;
+        }
+        span{
+            margin-left: -460px;
+        }
+        .o{
+            margin-right: -30px;
+        }
+        .inputBx span{
+            text-align:left;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .inputBx input{
+            width: 65%;
+            /* padding: 10px 20px; */
+            padding: 3px 8px 3px 8px;
+            height: 30px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            background: transparent;
+            border-radius: 4px;
+            border: solid 1px black;
+        }
+        #boom{
+            width:68%;
+            height: 40px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        #join{
+            width:68%;
+            height:55px;
+            margin: auto;
+            margin-top: 40px;
+            border: 1px solid #d1d1d1;
+            padding-top: 25px;
+        }
+        #join>a{
+            color: #767676;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="two">
+        <form action="" id="login">
+            <img src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg"alt="logo">
+            <h1>Login</h1>
+            <p>Welcome back.</p>
+
+            <div class="inputBx">
+                <span>Email</span><br>
+                <input type="email" name="" id="email" required placeholder="Enter email here">
+            </div>
+            <div class="inputBx">
+                <span class="o">Password</span><br>
+                <input type="password" name="" id="password" required placeholder="Current Password">
+            </div>
+            <div class="inputBx">
+                <input type="submit" name="" value="Login" id="boom">
+            </div>
+            <div id="join">Don't have an account? <a href="signup.html">Join Unsplash</a></div>
+        
+        
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    let array = JSON.parse(localStorage.getItem("userdata"));
+    let tak = document.querySelector("use");
+
+    let againcallme = () => {
+        event.preventDefault();
+
+        let tom = {
+            email: login.email.value,
+            password: login.password.value,
+        };
+        if (array === null) {
+            alert("Create-Account");
+        }
+        else if (array.email != tom.email){
+            alert("Wrong Email ! please try again");
+        }
+        else if (array.password != tom.password){
+            alert("Wrong Password ! please try again");
+        }
+        else if (array.email === tom.email && array.password === tom.password) {
+            alert("Login Successful");
+            window.location.href = "index.html";
+        }
+        else {
+            alert("User Doesn't Exist");
+        }
+    };
+
+    document.querySelector("form").addEventListener("submit", againcallme);
+
+</script>
