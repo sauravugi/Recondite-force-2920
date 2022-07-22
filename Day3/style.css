@@ -14,14 +14,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
 }
 a > img{
     width: 45px;
     height: 45px;
 }
 #search {
-    width: 800px;
+    width: 920px;
     height: 40px;
     border: 1px solid transparent;
     background-color: #eeeeee;
@@ -45,8 +45,9 @@ button:hover{
 #cards i {
     position: absolute;
 }
-i{
-    margin-left: 40px;
+i:hover{
+    cursor: pointer;
+    font-size: 16px;
 }
 
 #hamburger > img{
@@ -57,10 +58,7 @@ i{
 #hamburger:hover{
     cursor: pointer;
 }
-#notification > img {
-    width: 25px;
-    height: 25px;
-}
+
 #notification > img:hover{
     cursor: pointer;
 }
@@ -70,4 +68,7 @@ i{
 }
 #logo > img:hover{
     cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
