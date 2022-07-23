@@ -4,8 +4,315 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautiful Free Images & Pictures</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+            font-family:sans-serif;
+        }
+        img{
+            position: absolute;
+            z-index: -12;
+            width: 100%;
+            height: 600px;
+        }
+        #main>input{
+            width: 800px;
+            height: 60px;
+            margin: 310px 250px;
+            border-radius: 5px;
+            border: transparent;
+            font-size: 18px;
+            padding: 20px;
+            position: relative;
+        }
+        .text{
+            margin-left: 250px;
+            color: white;
+            margin-top: 170px;
+            position:absolute
+        }
+        h1{
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 20px;
+           
+        }
+        .submenu {
+         position: absolute;
+         display: block;
+         width: 600px;
+         height: 250px; 
+         background-color: white;
+         border: 1px solid;
+         top: 370px;
+         left: 250px;
+         opacity: 0;
+         visibility: hidden;
+         z-index: 999; 
+         padding: 10px;
+        }
+
+        input:hover + .submenu{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sm-1{
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-evenly;
+        }
+        .submenu>p{
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .sm-1>div{
+            width: 90px;
+            height: 35px;
+            border-radius: 7px;
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        #photo{
+            margin-top: -130px;
+            font-size: 14px;
+            color: white;
+            margin-left: 30px;
+        }
+        #photo2{
+            font-size: 14px;
+            color: white;
+            margin-left: 530px;
+            margin-top: -15px;
+        }
+        #photo3>a{
+            font-size: 16px;
+            color: grey;
+            margin-left: 1180px;
+        }
+        #photo3{
+            margin-top: -35px;
+        }
+        #photo4{
+            font-size: 14px;
+            color: white;
+            margin-left: 1050px;
+            margin-top: 5px;
+        }
+        #photo>a:hover{
+            font-size: 16px;
+            color: white;
+            
+        }
+        #photo>a{
+            font-size: 14px;
+            color:grey;
+            
+        }
+        #photo2>a:hover{
+            font-size: 14px;
+            color: white;
+        }
+        #photo2>a{
+            font-size: 14px;
+            color:grey;
+            
+        }
+        #photo3>a:hover{
+            color:white;
+            
+        }
+        #append{
+            width: 33%;
+            padding-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            margin-top: -350px;
+        }
+        #append>div>img{
+            width: 400px;
+            height: 400px;
+        }
+        #append>div{
+            margin-top: 420px;
+        }
+
+        #append2{
+            margin-left: 37%;
+            margin-top: -4390px;
+            width: 30%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        #append2>div>img{
+            width: 400px;
+            height: 500px;
+        }
+        #append2>div{
+            margin-top: 520px;
+        }
+
+
+        #append3{
+            width: 33%;
+            padding-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            margin-top: -5190px;
+            margin-left: 67%;
+        }
+        #append3>div>img{
+            width: 350px;
+            height: 400px;
+        }
+        #append3>div{
+            margin-top: 420px;
+        }
+        
+    </style>
 </head>
 <body>
+
+    <img src="https://images.unsplash.com/photo-1657922716930-dc294282063e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Error">
+    <div id="main">
+        
+        <div class="text">
+        <h1>Unsplash</h1>
+        <p>The internet’s source of freely-usable images.</p>
+        <p>   Powered by creators everywhere.</p>
+        </div>
+        <input type="text" placeholder="🔍 Search free high-resolution photos" id="myInput"/>
+
+        <div class="submenu">
+            <p>Trending Searches</p>
+            <div class="sm-1">
+                <div>Rose</div>
+                <div>Wallpaper</div>
+                <div>Sunset</div>
+                <div>Beauty</div>
+            </div>
+            <p>Trending Topics</p>
+            <div class="sm-1">
+                <div>Fasion</div>
+                <div>Health</div>
+                <div>People</div>
+                
+            </div>
+            <p>Trending Collections</p>
+            <div class="sm-1">
+                <div>Church</div>
+                <div>Spring</div>
+                <div>Luxury</div>
+            </div>
+              
+        </div>
+        <p id="photo">Photo by <a href="#">Saurav</a></p> 
+        <p id="photo2">Read more about the <a href="#">Unsplash License</a></p>
+        <p id="photo3"><a href="#">SQUARESPACE</a></p>
+        <p id="photo4">Start your website with Squarespace today.</p>
+    </div>
+
+    <div id="append">
+
+    </div>
+    <div id="append2">
+
+    </div>
+    <div id="append3">
+
+    </div>
+
+
+
+
+
+    
     
 </body>
 </html>
+<script>
+
+    let input = document.getElementById("myInput");
+    input.addEventListener("keypress", function(event) {
+        
+    if (event.key === "Enter") {
+        
+    event.preventDefault();
+    let query = document.getElementById("myInput").value;
+    localStorage.setItem('query',query);
+    window.location.href="./search.html";
+        }
+    });
+
+    let div1 = document.getElementById("append");
+    //console.log(div1)
+    let url1 =`https://api.unsplash.com/search/photos/?client_id=kR8s8P8tFOKLqwlLNHwKxaknfkJt369vpdcbBioJNRc&query=rose`;
+
+        fetch(url1)
+        .then((res)=>{
+        return res.json();
+        })
+        .then((res)=>{
+            console.log(res.results);
+            append(res.results,div1)
+        })
+
+
+        function append(data,box){
+        data.forEach(function(el){
+            //console.log(el)
+            let img=document.createElement("img");
+            img.src=el.links.download;
+            let div = document.createElement("div");
+            div.append(img);
+            box.append(div);
+        })
+
+        
+        }
+
+
+
+    let div2 = document.getElementById("append2");
+    //console.log(div1)
+    let url2 =`https://api.unsplash.com/search/photos/?client_id=kR8s8P8tFOKLqwlLNHwKxaknfkJt369vpdcbBioJNRc&query=wallpaper`;
+
+        fetch(url2)
+        .then((res)=>{
+        return res.json();
+        })
+        .then((res)=>{
+            console.log(res.results);
+            append(res.results,div2)
+        });
+
+
+
+        let div3 = document.getElementById("append3");
+    //console.log(div1)
+    let url3 =`https://api.unsplash.com/search/photos/?client_id=kR8s8P8tFOKLqwlLNHwKxaknfkJt369vpdcbBioJNRc&query=nature`;
+
+        fetch(url3)
+        .then((res)=>{
+        return res.json();
+        })
+        .then((res)=>{
+            console.log(res.results);
+            append(res.results,div3)
+        });
+    
+</script>
