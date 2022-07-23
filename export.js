@@ -9,7 +9,7 @@ let submitFunc = ()=>{
         <div>Note: Every photo on Unsplash is published under the <a href="https://unsplash.com/license">Unsplash License</a> – which allows people to use photos from Unsplash for free, including for commercial purposes, without attributing the photographer on Unsplash.<a href="https://unsplash.com/license">Learn more.</a></div>
     </div>
     <div id="image">
-        <img src="https://i.pinimg.com/236x/1b/24/59/1b2459c18ee6afb8fef38d090e10a900.jpg" alt="">
+        <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/27721/image-upload/Minimalist%20Polaroid%20Collage%20Template.jpg" alt="">
     </div>
 </div>
 <div id="footer">
