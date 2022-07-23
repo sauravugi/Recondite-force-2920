@@ -20,6 +20,10 @@ a > img{
     width: 45px;
     height: 45px;
 }
+#home_page > a > img:hover {
+    width: 48px;
+    height: 48px;
+}
 #search {
     width: 920px;
     height: 40px;
