@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+#main {
+    margin: auto;
+    margin-top: 10px;
+    width: 98%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+a > img{
+    width: 45px;
+    height: 45px;
+}
+#search {
+    width: 800px;
+    height: 40px;
+    border: 1px solid transparent;
+    background-color: #eeeeee;
+    border-radius: 50px;
+    font-size: 16px;
+}
+#btn > button{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(188, 185, 185);
+}
+#btn > button:hover{
+    cursor: pointer;
+}
+#hamburger > img{
+    width: 20px;
+    height: 20px;
+}
+#hamburger:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#submit {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(180, 176, 176);
+    border-radius: 5px;
+    color: black;
+}
