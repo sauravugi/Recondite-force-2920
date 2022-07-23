@@ -15,15 +15,15 @@
     <div id="main">
         <!-- home page gonna append here -->
         <div class="cards">
-            <a href="#">
+            <a href="./homepage.html">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX///8AAAAwMDD09PT7+/s6OjphYWHAwMAsLCzExMQbGxtRUVE3Nzc0NDR3d3deXl5JSUmfDipYAAABKElEQVR4nO3caw6CMBCFUUQEfPDY/2rdgAlpmziDnm8DN+d3m+k6SZIkSZIkSZKk3+z+6Nt63KMJB02X1qZowkGEhITxERISxkdISBgfISFhfISEhPEREhLGR0hIGB8hIWF8hISE8RESEsZHSEgY3+8Lh2trQzRBkiRJkiRJkqQzNlR0rtHn61bYsjYL16V09PWsHpvLX462ZuFWPjpXj/XlY2OzcCwf7QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJP7e1HlUYKn7ufVUYEiFh/ggJ80dImD9CwvwREuaPkDB/hIT5IyTMHyFh/ggJ80dImD9CwvwREuaPkDB/hP8srLgqGFL9VcF97s/QvFcLJUmSJEmSJEmSvtgbYe9Jk2k8IqcAAAAASUVORK5CYII=" alt="error">
             </a>
         </div>
-        <div class="cards">
-            
-            
+
+        <div id="input_search" class="cards">
             <input type="text" id="search" placeholder="&#xF002;   Search free high-resolution photos" style="font-family:Arial, FontAwesome"/>    
         </div>
+
         <div class="cards">
             <a href="">Advertise</a>
         </div>
@@ -48,4 +48,75 @@
     
 </body>
 </html>
+
+<script>
+    let input = document.getElementById("search");
+    input.addEventListener("keypress", function(event) {
+        
+    if (event.key === "Enter") {
+        
+    event.preventDefault();
+    let query = document.getElementById("search").value;
+    localStorage.setItem('query',query);
+    window.location.href="./result.html";
+        }
+    });
+
+    input.addEventListener("click",()=>{
+        let submenu = document.createElement("div");
+        submenu.setAttribute("class","submenu");
+
+        let trnd = document.createElement("p");
+        trnd.innerText = "Recent Searches";
+
+        let first = document.createElement("div");
+        first.setAttribute("class","sm-1");
+
+        let rose = document.createElement("div");
+        rose.innerText = "Rose";
+        let Wallpaper = document.createElement("div");
+        Wallpaper.innerText = "Wallpaper";
+        let Sunset = document.createElement("div");
+        Sunset.innerText = "Sunset";
+        let Beauty = document.createElement("div");
+        Beauty.innerText = "Beauty";
+
+        let topics = document.createElement("p");
+        topics.innerText = "Trending Topics";
+
+        let second = document.createElement("div");
+        second.setAttribute("class","sm-1");
+
+        let Fasion = document.createElement("div");
+        Fasion.innerText = "Fasion";
+        let Health = document.createElement("div");
+        Health.innerText = "Health";
+        let People = document.createElement("div");
+        People.innerText = "People";
+        let Movies = document.createElement("div");
+        Movies.innerText = "Movies";
+        
+
+        let Collections = document.createElement("p");
+        Collections.innerText = "Trending Searches";
+
+        let third = document.createElement("div");
+        third.setAttribute("class","sm-1");
+
+        let Church = document.createElement("div");
+        Church.innerText = "Church";
+        let Spring = document.createElement("div");
+        Spring.innerText = "Spring";
+        let Luxury = document.createElement("div");
+        Luxury.innerText = "Luxury";
+        
+        first.append(rose,Wallpaper,Sunset,Beauty);
+        second.append(Fasion,Health,People,Movies);
+        third.append(Church,Spring,Luxury);
+
+        submenu.append(trnd,first,topics,second,Collections,third);
+        document.getElementById("input_search").append(submenu);
+
+    })
+</script>
 

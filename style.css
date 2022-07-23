@@ -27,6 +27,7 @@ a > img{
     background-color: #eeeeee;
     border-radius: 50px;
     font-size: 16px;
+    padding-left: 20px;
 }
 #btn > button{
     padding: 5px 10px;
@@ -51,5 +52,47 @@ a{
     background-color: transparent;
     border: 1px solid rgb(180, 176, 176);
     border-radius: 5px;
+    color: black;
+}
+
+/* search bar styling  */
+
+.submenu {
+ position: absolute;
+ display: block;
+ width: 797px;
+ height: 300px; 
+ border: 1px solid rgb(216, 207, 207);
+ border-radius: 5px;
+ visibility: hidden;
+ z-index: 999;
+ padding: 20px;
+ color: gray;
+}
+
+input:hover + .submenu{
+    visibility: visible;
+    opacity: 1;
+} 
+.sm-1{
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.submenu>p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.sm-1>div{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
     color: black;
 }
