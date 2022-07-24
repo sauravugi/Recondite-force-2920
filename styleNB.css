@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-#main {
+#main_nav {
     margin: auto;
     margin-top: 10px;
     width: 98%;
@@ -78,7 +78,8 @@ a{
 input:hover + .submenu{
     visibility: visible;
     opacity: 1;
-} 
+}
+
 .sm-1{
     display: flex;
     margin-top: 10px;
@@ -128,6 +129,9 @@ p{
 #hamburger:hover + #not{
     opacity: 1;
 }
+#not:hover{
+    opacity: 1;
+}
 .hamB {
     margin: auto;
     margin-top: 20px;
@@ -154,7 +158,7 @@ p{
     gap: 15px;
     margin-top: 20px;
 }
-#popImg > img{
+#popImg > a > img{
     width: 20px;
     height: 20px;
 }
