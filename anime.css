@@ -1,0 +1,13 @@
+body { align-items: center; background: transparent; display: flex; height: 100vh; justify-content: center;}
+@mixin white-gradient { background: transparent;}
+$animationSpeed: 40s;
+
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-150px * 9))}}
+
+// Styling.slider { background: transparent; box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); height: 300px; margin: auto; overflow:hidden; position: relative; width: 100vw; width: 100%; width: auto; width: min-content; width: fit-content; width: max-content; width: 100px; width: 100rem; 16px * 100; width: 100em; width: auto;
+ background:   background-color:  background-position;	margin: margin-left; margin-top;	
+
+
+
+	 &::before, &::after {  @include white-gradient;  content: "";  height: 300px;  position: absolute;  width: 200px;  z-index: 2; }	 &::after {  right: 0;  top: 0;  transform: rotateZ(180deg); }
+ &::before {  left: 0;  top: 0; } .slide-track-each {  display:flex;  flex-direction: row; }	 .slide-track {  display: flex;  flex-direction: column;  animation: scroll $animationSpeed linear infinite;  display: flex;  height: 100%;  width: calc(250px * 14); }	 .slide {  height: 100px;  width: 550px; }}

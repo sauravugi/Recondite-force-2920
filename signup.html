@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Unsplash | Unsplash</title>
+    <link rel="icon" href="https://seeklogo.com/images/U/unsplash-logo-EAD3A22BB0-seeklogo.com.png">
+    <style>
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+            display: flex;
+        }
+        #one{
+            background-image: url(https://images.unsplash.com/photo-1658270646113-20a357e7a73f?ixlib=rb-1.2.1&amp;w=1080&amp;fit=max&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb);
+            width:45%;
+            height: 850px;
+            background-size: cover;
+            background-position: center center;
+            background-color: #111;
+            -webkit-box-flex: 1;
+            color: #fff;
+            -webkit-text-size-adjust: 100%;
+            margin:-10px 0px -10px -10px;
+        }
+        h1{
+            font-size: 55px;
+            margin-bottom: 16px;
+        }
+        #one>div{
+            width:80%;
+            height:300px;
+            margin: auto;
+        }
+        #logo>img{
+            margin-top: 100px;
+        }
+        #create{
+            text-align: center;
+        }
+
+        /* signup */
+        #two{
+            width:70%;
+            margin:-20px -20px 0px 0px;
+
+        }
+        #signup{
+            width:65%;
+            margin: auto;
+        }
+        h4,p{
+            text-align: center;
+        }
+        #two #signup h4{
+            font-size: 50px;
+            line-height: 1.2;
+        }
+        #two #signup h4+p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin:-30px 0px 16px 0px;
+        }
+        p+p{
+            margin: -10px 0px 30px 0px;
+        }
+        h4+p>a{
+            color: #767676;
+            text-decoration: underline;
+        }
+
+        .inputBx{
+            margin-bottom: 20px;
+            margin-left: 80px;
+            
+        }
+        .inputBx span{
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .inputBx input{
+            width: 80%;
+            /* padding: 10px 20px; */
+            padding: 5px 12px 5px 12px;
+            height: 40px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            background: transparent;
+            border-radius: 4px;
+            border: solid 1px black;
+        }
+        #boom{
+            width:84.5%;
+            height: 50px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .terms ,a{
+            color: #767676;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div id="one">
+        <div id="logo">
+            <img src="https://unsplash.com/assets/core/logo-white-8962708214629a3e8f9fbf5b87b70c3ace41c4175cbcc267f7fbb8449ac45bdd.svg" alt="logo">
+        </div>
+        <div id="create">
+            <h1>Creation starts here</h1>
+            <h2>Access 4,072,970 free, high-resolution photos you can’t find anywhere else</h2>
+        </div>
+    </div>
+    <div id="two">
+        <form action="" id="signup">
+            <h4>Join Unsplash</h4>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>OR</p>
+
+            <div class="inputBx">
+                <span>Full Name</span><br>
+                <input type="text" name="" id="name" required placeholder="Enter your name">
+            </div>
+            <div class="inputBx">
+                <span>Email</span><br>
+                <input type="email" name="" id="email" required placeholder="Enter email here">
+            </div>
+            <div class="inputBx">
+                <span>Username</span><br>
+                <input type="text" name="" id="username" required placeholder="Enter username">
+            </div>
+            <div class="inputBx">
+                <span>Password</span><br>
+                <input type="password" name="" id="password" required placeholder="Current Password">
+            </div>
+            <div class="inputBx">
+                <input type="submit" name="" value="Join" id="boom">
+            </div>
+            <p class="terms">By joining, you agree to the <a href="https://unsplash.com/terms">Terms</a> and <a href="https://unsplash.com/privacy">Privacy Policy</a>.</p>
+
+
+            <!-- <input type="text" name="" id="name" required placeholder="Enter your name"><br>
+            <input type="email" name="" id="email" required placeholder="Enter email here"><br>
+            <input type="text" name="" id="username" required placeholder="Enter username"><br>
+            <input type="password" name="" id="password" required placeholder="Current Password"><br>
+            <input type="submit" name="" value="Submit" id="boom"> -->
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function userdetails(name,email,username,password){
+        this.name=name;
+        this.email=email;
+        this.username=username;
+        this.password=password;
+    }
+    let array=JSON.parse(localStorage.getItem("userdata"))
+
+    let callbackfun=()=>{
+        event.preventDefault();
+        let name=document.querySelector("#name").value;
+        let email=document.querySelector("#email").value;
+        let username=document.querySelector("#username").value;
+        let password=document.querySelector("#password").value;
+
+        let users= new userdetails(name,email,username,password);
+
+        localStorage.setItem("userdata",JSON.stringify(users));
+        window.location.reload();
+        window.location.href="login.html";
+    }
+    document.querySelector("form").addEventListener("submit",callbackfun);
+
+</script>
