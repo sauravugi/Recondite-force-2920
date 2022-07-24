@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <style>
+        #details{
+            width: 58%;
+            display: flex;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        #pic{
+            width: 300px;
+            height: 150px;
+            margin-right: 50px;
+            
+        }
+        #pic>img{
+            width:100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        #con{
+            color: grey;
+        }
+        #con:hover{
+            color: teal;
+            font-weight: bold;
+        }
+        #Int{
+            display: flex;
+        }
+        #Int>div{
+            width: 70px;
+            height: 20px;
+            background-color: rgb(219, 226, 233);
+            margin-right: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #Int>div:hover{
+            background-color: teal;
+        }
+
+        #main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 30px;
+        }
+        #main>div>img{
+            width: 100%;
+            height: 100%;
+        }
+        #header{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            padding-left: 20px;
+        }
+        #header>div{
+            margin-right: 30px;
+            color: grey;
+        }
+        h1{
+            margin-left: 30px;
+        }
+        #four{
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+    <div id="details">
+        <div id="pic">
+            <img src="https://images.unsplash.com/photo-1635922454366-d85ba7654d8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fFM0TUtMQXNCQjc0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Error">
+        </div>
+        <div id="data">
+            <h1>Saurav Kumar</h1>
+            <p>If you'd like to support me, you can consider a donation paypal.me/pmcze ❤ Questions
+                about how you can use the photos? help.unsplash.com/en/collections/1463188-unsplash-
+                license 👍</p>
+            <p>Location :- Siwan</p>
+            <p id="con">Connect with Saurav :- Instagram</p>
+            <p>Intrests</p>
+            <div id="Int">
+                <div>Texture</div>
+                <div>Wallpaper</div>
+                <div>Nature</div>
+                <div>Painting</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <div><a href="index.html">Photos</a></div>
+        <div><a href="index.html">Collections</a></div>
+        <div><a href="user.html">Users</a></div>
+        <div id="four">Any Orientation</div>
+        <div>Any Color</div>
+        <div>Sort By Relevance</div>
+    </div>
+    <h1 id="h1"></h1>
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    
+    
+    let h1 = document.getElementById('h1');
+    h1.innerText = `Saurav`;
+    let main = document.getElementById('main');
+
+    let url =`https://api.unsplash.com/search/photos/?client_id=kR8s8P8tFOKLqwlLNHwKxaknfkJt369vpdcbBioJNRc&query=Nature`;
+
+        fetch(url)
+        .then((res)=>{
+        return res.json();
+        })
+        .then((res)=>{
+            console.log(res.results);
+            
+            append(res.results,main)
+        })
+
+        function append(data,box){
+        data.forEach(function(el){
+            //console.log(el)
+            let img=document.createElement("img");
+            img.src=el.links.download;
+            let div = document.createElement("div");
+            div.append(img);
+            box.append(div);
+        })
+        };
+</script>
