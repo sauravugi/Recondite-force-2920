@@ -4,6 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautiful Free Images & Pictures</title>
+    <link rel="stylesheet" href="./styleNB.css">
+    <link rel="icon" href="https://seeklogo.com/images/U/unsplash-logo-EAD3A22BB0-seeklogo.com.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{
             margin: 0px;
@@ -11,7 +14,7 @@
             /* box-sizing: border-box; */
             font-family:sans-serif;
         }
-        img{
+        body>img{
             position: absolute;
             z-index: -12;
             width: 100%;
@@ -27,28 +30,30 @@
             padding: 20px;
             position: relative;
         }
-        .text{
+        .text22{
             margin-left: 250px;
-            color: white;
+            
             margin-top: 170px;
             position:absolute
         }
-        h1{
+        #head22{
             font-size: 50px;
             margin-bottom: 10px;
+            color: white;
         }
-        p{
+        #para22,#para23{
             font-size: 20px;
+            color: white;
            
         }
-        .submenu {
+        .submenu2 {
          position: absolute;
          display: block;
          width: 600px;
          height: 250px; 
          background-color: white;
          border: 1px solid;
-         top: 422px;
+         top: 493px;
          left: 250px;
          opacity: 0;
          visibility: hidden;
@@ -56,21 +61,21 @@
          padding: 10px;
         }
 
-        input:hover + .submenu{
+        input:hover + .submenu2{
             visibility: visible;
             opacity: 1;
         }
 
-        .sm-1{
+        .sm-12{
             display: flex;
             margin-top: 10px;
             justify-content: space-evenly;
         }
-        .submenu>p{
+        .submenu2>p{
             font-size: 16px;
             margin-top: 10px;
         }
-        .sm-1>div{
+        .sm-12>div{
             width: 90px;
             height: 35px;
             border-radius: 7px;
@@ -144,7 +149,10 @@
             height: 400px;
         }
         #append>div{
-            margin-top: 420px;
+            margin-top: 20px;
+        }
+        #append>div:nth-child(1){
+            margin-top: 400px;
         }
 
         #append2{
@@ -161,7 +169,10 @@
             height: 500px;
         }
         #append2>div{
-            margin-top: 520px;
+            margin-top: 20px;
+        }
+        #append2>div:nth-child(1){
+            margin-top: 120px;
         }
 
 
@@ -180,7 +191,10 @@
             height: 400px;
         }
         #append3>div{
-            margin-top: 420px;
+            margin-top: 20px;
+        }
+        #append3>div:nth-child(1){
+            margin-top: -80px;
         }
         #header{
             margin-bottom: 2px;
@@ -205,60 +219,151 @@
     </style>
 </head>
 <body>
+
+    <div id="main_nav">
+        <!-- home page gonna append here -->
+        <div id="home_page" class="cards">
+            <a href="index.html">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX///8AAAAwMDD09PT7+/s6OjphYWHAwMAsLCzExMQbGxtRUVE3Nzc0NDR3d3deXl5JSUmfDipYAAABKElEQVR4nO3caw6CMBCFUUQEfPDY/2rdgAlpmziDnm8DN+d3m+k6SZIkSZIkSZKk3+z+6Nt63KMJB02X1qZowkGEhITxERISxkdISBgfISFhfISEhPEREhLGR0hIGB8hIWF8hISE8RESEsZHSEgY3+8Lh2trQzRBkiRJkiRJkqQzNlR0rtHn61bYsjYL16V09PWsHpvLX462ZuFWPjpXj/XlY2OzcCwf7QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJP7e1HlUYKn7ufVUYEiFh/ggJ80dImD9CwvwREuaPkDB/hIT5IyTMHyFh/ggJ80dImD9CwvwREuaPkDB/hP8srLgqGFL9VcF97s/QvFcLJUmSJEmSJEmSvtgbYe9Jk2k8IqcAAAAASUVORK5CYII=" alt="error">
+            </a>
+        </div>
+        <div id="input_search" class="cards">
+            <input type="text" id="search" placeholder="&#xF002;   Search free high-resolution photos" style="font-family:Arial, FontAwesome"/> 
+        </div>
+        <div class="cards">
+            <a href="https://unsplash.com/explore">Explore</a>
+        </div>
+        <div class="cards">
+            <a href="./Advertise.html">Advertise</a>
+        </div>
+        <div class="cards">
+            <a href="./blog.html">Blog</a>
+        </div>
+        <div style="font-size: 30px; font-weight: lighter;">|</div>
+
+        <div>
+            <a href="./login.html">Login</a>
+        </div>
+        <div>
+            <a href="./signup.html">Signup</a>
+        </div>
+        <div>/</div>
+        <a href="./submit.html"><button id="submit">Submit a photo</button></a>
+        <!-- my drop down menu will go here  -->
+        <div id="hamburger">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAARVBMVEX///90d3lwc3WvsbKQk5SJjI2io6R+gIKam5xpbW+eoKFtcHJoa27g4eG7vL1kZ2nU1dXr6+vNzs/HyMnb29yqq6309PSnOG8ZAAABFUlEQVRoge3Xa5LCIBAEYB5LCEJCiJD7H3UTrdIh5b/tsUp3vgM0JQzSUUoIIYR4p6WNQG05xU8+GajkJ5pfktFgJhWygEfHHzzZ/8CxQHieg40cC0T7WOACP4GDubzvF7CfAfsUqSnh81N30yaNvsm6y9+tww/QsL7+xxNCiG93HR3QeD3FVx2gD78JutJ89hft45td4+lF7bHA5ze7yjBE+xiRQfUMe2RosyvYa3bLD/QLRxWfsc0u+y7/OAc7ANmqhBDiX5qdB3LzKX5NEdvsYuo+xWtGpt9l+iTg4w9kg3ia3XOTGk/x+qpmx3MGZIwcR7NzZEw3g292ZqM3bXM5IotdzK7L35XZAs3n4iiEEOJPfgGlrRynknxxVAAAAABJRU5ErkJggg==" alt="">
+            
+        </div>
+        <div id="not">
+            <div id="hamburg">
+                <div class="hamB">
+                    <div>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAARVBMVEWAgID///98fHyoqKji4uKQkJB4eHjs7OzDw8PIyMj5+fl1dXWFhYXz8/Nvb2+UlJSvr6+dnZ3T09O7u7vb29u1tbVkZGR6tVYSAAADFElEQVRoge2b25ajIBBFSXFT8ILG9P9/6pSabrWDimDizKw6j4myKTiUIMhuYepyx0Plsi6wVBZykXYMFIRLAXP6LDqy2VEh/xS6luowu5eS++Hv0jUcD/wZPuzi9+g6lj3w9/B7dJlEl2n0LK7Pv6WyJLpNgjNmU+h5WugYfJ5ArxPhjNXxdJMaOgZvoukitdux40U0vV3EHjr2FtepNpq+GG/AdZj4HL895sLpdtu+k3JLdKITnehEJzrR/xH6zvR0RlcH6YLX0qOCzVX4Lom7q+bih142NmW9FCOwTTnSdcTy/AQ+0z3dFFfAEV8YpN/TlwxxUnekF/vXvUnFjSW9HkgTaCYupAuiE53oRCc60f9f+sdnlD9wK5jJGnVBBcCqJjP9jNp0XKpPzu6Ukrw101rGiHvN1CeaABSr78K8rKR03rDoDahgdJPPtoqW6zjTOVa9qQYAFXPd8nX96ypSv8OGYG2Tve6PedewZcvliRUAiyYrvWtY3Xl/N+Jxig17kz2Ed3uk7HA+XxU891agtyEkmQDvXphsjs55UQ2ZFpTFQeC9qLehjWoCLPTFZN/C4d0XOuV5tMVK38TYcMhkK0G33D5LWzxlQEGdrTRBy4vQbAhKFWMm8wSd1TC15O9nHP4l3ZoNMRvuNgHYWSb7FXTnJCw60feEBVs0ub/qOq+3siH+tWWyl6qvPN/RBPXdXwzaEHzZ0JfJfiqNJvO12sbsAiwE23DbZLDWX9tzm9GG3nhMnw1HGyornd9kZmmyg/ShAkw6sWZDydS6yYSTO8kyaF6HNlzNhu0Bk8XRhyZYzYaeKo2ZLKDUA3NatNaaDWdBtzw8Lx6cUeNIW8uGvcR2OkilszEbPjzZsOwecsvf59DHGqANF+wgk51E72/8mg8zU8UVEr2Sqhb0uMUA0YlOdKIT/e+lW11O0p+ms2KuuCKuf1tIdKITnehEJzrRiU50ohM9gX7t+boLzxbKG1se/f2kbN7vw9YXnSltxvO0kZ+cpmn4YHU4+cDVkS99z5BSfDr5oLPwr5zPkHvuYP0BMvYxUtQRhksAAAAASUVORK5CYII=" alt="">
+                        <h2>Company</h2>
+                    </div>
+                    <br>
+                    <p><a href="https://unsplash.com/about">About</a></p>
+                    <p><a href="https://unsplash.com/history">History</a></p>
+                    <p><a href="https://unsplash.com/hiring">Join the team</a></p>
+                    <p><a href="https://unsplash.com/press">Press</a></p>
+                    <p><a href="#">Contact us</a></p>
+                    <p><a href="https://help.unsplash.com/en/?utm_source=unsplash&utm_medium=referral">Help Center</a></p>
+                </div>
+                <div class="hamB">
+                    <div>
+                        <img src="data:image/png;base64,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" alt="">
+                        <h2>Product</h2>
+
+                    </div>
+                    <br>
+                    <p><a href="https://unsplash.com/developers">Develpers/API</a></p>
+                    <p><a href="https://unsplash.com/data">Unsplash Dataset</a></p>
+                    <p><a href="https://apps.apple.com/us/app/unsplash/id1290631746?ls=1&utm_medium=referral&utm_source=unsplash">Unsplash for iOS</a></p>
+                    <p><a href="https://unsplash.com/apps">Apps & Plugins</a></p>
+                </div>
+                <div class="hamB">
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_BrzN7Y3WRfIRE5FqFw0PzrUTmFeeg-4asw&usqp=CAU" alt="">
+                        <h2>Community</h2>
+                    </div>
+                    <br>
+                    <p><a href="https://unsplash.com/community">Become a Contributer</a></p>
+                    <p><a href="https://unsplash.com/t">Topics</a></p>
+                    <p><a href="https://unsplash.com/collections">Collection</a></p>
+                    <p><a href="https://unsplash.com/trends">Trends</a></p>
+                    <p><a href="https://unsplash.com/awards">Unsplash Awards</a></p>
+                    <p><a href="https://unsplash.com/stats">Stats</a></p>
+                    <div id="popImg">
+                        <a href="https://twitter.com/unsplash?utm_source=unsplash&utm_medium=referral" target="_blank">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0dI7_Q80TTAms_QyFjhnogpHAEvLw6ZSyzA&usqp=CAU" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/unsplash/" target="_blank">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZvefDADaFnMd8pV11IWbe9RaOPX8gcFsgPw&usqp=CAU" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/unsplash/?utm_source=unsplash&utm_medium=referral" target="_blank">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXYuuqn4YQPT8NkK8sXw-lYwLGhiBqFPs14Q&usqp=CAU" alt="">
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div id="header">
 
-        <div><a href="#">Editorial</a></div>
-        <div id="border"><a href="#">Following</a></div>
-        <div><a href="#">Current Event</a></div>
-        <div><a href="#">Wallpapers</a></div>
-        <div><a href="#">3D Renders</a></div>
-        <div><a href="#">Textures & Patterns</a></div>
-        <div><a href="#">Experimental</a></div>
-        <div><a href="#">Architecture</a></div>
-        <div><a href="#">Nature</a></div>
-        <div><a href="#">Business & Work</a></div>
-        <div><a href="#">Fashion</a></div>
-        <div><a href="#">Film</a></div>
-        <div><a href="#">Food & Drink</a></div>
+        <div><a href="index.html">Editorial</a></div>
+        <div id="border"><a href="following.html">Following</a></div>
+        <div><a href="currentevent.html">Current Event</a></div>
+        <div><a href="wallpapers.html">Wallpapers</a></div>
+        <div><a href="3Drenders.html">3D Renders</a></div>
+        <div><a href="textures.html">Textures & Patterns</a></div>
+        <div><a href="experimental.html">Experimental</a></div>
+        <div><a href="architecture.html">Architecture</a></div>
+        <div><a href="nature.html">Nature</a></div>
+        <div><a href="bussiness.html">Business & Work</a></div>
+        <div><a href="fashion.html">Fashion</a></div>
+        <div><a href="film.html">Film</a></div>
+        <div><a href="food_drink.html">Food & Drink</a></div>
 
     </div>
 
     <img src="https://images.unsplash.com/photo-1657922716930-dc294282063e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Error">
     <div id="main">
         
-        <div class="text">
-        <h1>Unsplash</h1>
-        <p>The internet’s source of freely-usable images.</p>
-        <p>   Powered by creators everywhere.</p>
+        <div class="text22">
+        <h1 id="head22">Unsplash</h1>
+        <p id="para22">The internet’s source of freely-usable images.</p>
+        <p id="para23">   Powered by creators everywhere.</p>
         </div>
         <input type="text" placeholder="🔍 Search free high-resolution photos" id="myInput"/>
 
-        <div class="submenu">
+        <div class="submenu2">
             <p>Trending Searches</p>
-            <div class="sm-1">
+            <div class="sm-12">
                 <div>Rose</div>
                 <div>Wallpaper</div>
                 <div>Sunset</div>
                 <div>Beauty</div>
             </div>
             <p>Trending Topics</p>
-            <div class="sm-1">
+            <div class="sm-12">
                 <div>Fasion</div>
                 <div>Health</div>
                 <div>People</div>
                 
             </div>
             <p>Trending Collections</p>
-            <div class="sm-1">
+            <div class="sm-12">
                 <div>Church</div>
                 <div>Spring</div>
                 <div>Luxury</div>
             </div>
               
         </div>
-        <p id="photo">Photo by <a href="#">Saurav</a></p> 
-        <p id="photo2">Read more about the <a href="#">Unsplash License</a></p>
-        <p id="photo3"><a href="#">SQUARESPACE</a></p>
+        <p id="photo">Photo by <a href="user.html">Saurav</a></p> 
+        <p id="photo2">Read more about the <a href="license.html">Unsplash License</a></p>
+        <p id="photo3"><a href="Advertise.html">SQUARESPACE</a></p>
         <p id="photo4">Start your website with Squarespace today.</p>
     </div>
 
@@ -282,8 +387,8 @@
 </html>
 <script>
 
-    let input = document.getElementById("myInput");
-    input.addEventListener("keypress", function(event) {
+    let input12 = document.getElementById("myInput");
+    input12.addEventListener("keypress", function(event) {
         
     if (event.key === "Enter") {
         
@@ -350,5 +455,77 @@
             console.log(res.results);
             append(res.results,div3)
         });
+
+
+
+        let input = document.getElementById("search");
+    input.addEventListener("keypress", function(event) {
+        
+    if (event.key === "Enter") {
+        
+    event.preventDefault();
+    let query = document.getElementById("search").value;
+    localStorage.setItem('query',query);
+    window.location.href="./search.html";
+        }
+    });
+
+    input.addEventListener("click",()=>{
+        let submenu = document.createElement("div");
+        submenu.setAttribute("class","submenu");
+
+        let trnd = document.createElement("p");
+        trnd.innerText = "Recent Searches";
+
+        let first = document.createElement("div");
+        first.setAttribute("class","sm-1");
+
+        let rose = document.createElement("div");
+        rose.innerText = "Rose";
+        let Wallpaper = document.createElement("div");
+        Wallpaper.innerText = "Wallpaper";
+        let Sunset = document.createElement("div");
+        Sunset.innerText = "Sunset";
+        let Beauty = document.createElement("div");
+        Beauty.innerText = "Beauty";
+
+        let topics = document.createElement("p");
+        topics.innerText = "Trending Topics";
+
+        let second = document.createElement("div");
+        second.setAttribute("class","sm-1");
+
+        let Fasion = document.createElement("div");
+        Fasion.innerText = "Fasion";
+        let Health = document.createElement("div");
+        Health.innerText = "Health";
+        let People = document.createElement("div");
+        People.innerText = "People";
+        let Movies = document.createElement("div");
+        Movies.innerText = "Movies";
+        
+
+        let Collections = document.createElement("p");
+        Collections.innerText = "Trending Searches";
+
+        let third = document.createElement("div");
+        third.setAttribute("class","sm-1");
+
+
+        let Church = document.createElement("div");
+        Church.innerText = "Church";
+        let Spring = document.createElement("div");
+        Spring.innerText = "Spring";
+        let Luxury = document.createElement("div");
+        Luxury.innerText = "Luxury";
+        
+        first.append(rose,Wallpaper,Sunset,Beauty);
+        second.append(Fasion,Health,People,Movies);
+        third.append(Church,Spring,Luxury);
+
+        submenu.append(trnd,first,topics,second,Collections,third);
+        document.getElementById("input_search").append(submenu);
+
+    }) 
     
 </script>

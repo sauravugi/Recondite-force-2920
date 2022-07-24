@@ -52,6 +52,7 @@
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: auto;
             gap: 30px;
+            margin-top: 30px;
         }
 
         #main>div>img{
@@ -59,7 +60,7 @@
             height: 100%;
         }
         h2{
-            margin-top: -150px;
+            margin-top: 50px;
             margin-left: 50px;
             margin-bottom: 30px;
         }
@@ -83,6 +84,37 @@
             display: flex;
             align-items: center;
         }
+        #photo>a:hover{
+            font-size: 16px;
+            color: white;
+            
+        }
+        #photo>a{
+            font-size: 14px;
+            color:grey;
+            
+        }
+        #photo2>a:hover{
+            font-size: 14px;
+            color: white;
+        }
+        #photo2>a{
+            font-size: 14px;
+            color:grey;
+            
+        }
+        #photo{
+            margin-top: -220px;
+            font-size: 14px;
+            color: white;
+             margin-left: 30px;
+        }
+        #photo2{
+            font-size: 14px;
+            color: white;
+            margin-left: 530px;
+            margin-top: -15px;
+        }
     </style>
 </head>
 <body>
@@ -90,17 +122,17 @@
 
         <div><a href="index.html">Editorial</a></div>
         <div id="border"><a href="following.html">Following</a></div>
-        <div><a href="#">Current Event</a></div>
-        <div><a href="#">Wallpapers</a></div>
-        <div><a href="#">3D Renders</a></div>
-        <div><a href="#">Textures & Patterns</a></div>
-        <div><a href="#">Experimental</a></div>
-        <div><a href="#">Architecture</a></div>
+        <div><a href="currentevent.html">Current Event</a></div>
+        <div><a href="wallpapers.html">Wallpapers</a></div>
+        <div><a href="3Drenders.html">3D Renders</a></div>
+        <div><a href="textures.html">Textures & Patterns</a></div>
+        <div><a href="experimental.html">Experimental</a></div>
+        <div><a href="architecture.html">Architecture</a></div>
         <div><a href="nature.html">Nature</a></div>
-        <div><a href="#">Business & Work</a></div>
-        <div><a href="#">Fashion</a></div>
-        <div><a href="#">Film</a></div>
-        <div><a href="#">Food & Drink</a></div>
+        <div><a href="bussiness.html">Business & Work</a></div>
+        <div><a href="fashion.html">Fashion</a></div>
+        <div><a href="film.html">Film</a></div>
+        <div><a href="food_drink.html">Food & Drink</a></div>
 
     </div>
     <img src="https://images.unsplash.com/photo-1657561321371-2901ba93e9ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI4fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Error">
@@ -113,6 +145,8 @@
         <p>in between.</p>
         </div>
         <button>Submit to <span>Nature</span></button>
+        <p id="photo">Photo by <a href="user.html">Saurav</a></p> 
+        <p id="photo2">Read more about the <a href="license.html">Unsplash License</a></p>
         <h2>Nature</h2>
         <div id="main"></div>
 </body>
