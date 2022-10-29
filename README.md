@@ -10,12 +10,12 @@
 
 <h3 align="center"><a href="https://comfy-palmier-30bd29.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
-<p align="center"> 
+<h2 align="center"> 
     <br />&#10023;
      &#10023;     
-    <h2><a href="#About">About</a></h2>&#10023;
+    <a href="#About">About</a>&#10023;
     &#10023;
-  </p>
+  </h2>
   
   # Recondite-force-2920
 Unsplash.com is a popular website that offers hundreds of thousands of creative photos around the world. 
