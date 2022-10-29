@@ -13,7 +13,8 @@
 <p align="center"> 
     <br />&#10023;
      &#10023;     
-    <h2><a href="#About">About</a></h2> &#10023;
+    <h2><a href="#About">About</a></h2>&#10023;
+    &#10023;
   </p>
   
   # Recondite-force-2920
